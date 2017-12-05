@@ -19,6 +19,7 @@ Route::get('/influencer', function () {
     return view('influencer/index');
 });
 
+
 /*
 Route::get('/', function () {
     return view('welcome');
