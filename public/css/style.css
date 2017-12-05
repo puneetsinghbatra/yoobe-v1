@@ -1,0 +1,128 @@
+html {
+  width: 1280px;
+  margin: 0 auto; }
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
+  -webkit-font-smoothing: antialiased;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column; }
+
+#home {
+  background: #f84f51;
+  background: linear-gradient(to bottom, #f84f51, #f2429d);
+  height: 100vh;
+  color: #decfcf; }
+
+.btn {
+  background: transparent !important; }
+
+.logo {
+  height: 55px; }
+
+.input {
+  border-radius: 10px !important; }
+
+.main-input {
+  border-bottom-width: 0px !important;
+  border: 1px solid #c6c6c6 !important;
+  background-color: #ffffff !important;
+  width: 100% !important; }
+
+.btn.main-btn {
+  background: #f2429d !important;
+  border: 1px solid #ffffff !important;
+  color: white !important;
+  height: 47px;
+  width: 100%;
+  font-weight: 600;
+  border-top-right-radius: 6px;
+  border-bottom-right-radius: 6px;
+  line-height: 42px; }
+
+.select-wrapper {
+  border-top-left-radius: 6px;
+  border-bottom-left-radius: 6px;
+  background: #fff;
+  height: 47px; }
+  .select-wrapper input {
+    height: 46px !important;
+    color: black;
+    padding-left: 10px !important;
+    font-weight: 600; }
+
+.btn-add {
+  border: 2px solid #ffffff !important;
+  border-radius: 50% !important; }
+  .btn-add i {
+    position: relative;
+    bottom: 1px;
+    right: 1px; }
+
+hr {
+  width: 80px;
+  background: #ffffff;
+  margin-bottom: 50px;
+  height: 4px !important; }
+
+.title {
+  font-size: 40px;
+  font-weight: 600;
+  color: #ffffff; }
+
+.main {
+  width: 70%; }
+  .main .col {
+    padding: 0px !important;
+    margin: 0px !important; }
+
+.subtitle {
+  font-size: 19px;
+  font-weight: 600;
+  margin-bottom: 35px; }
+
+main {
+  flex: 1 0 auto; }
+
+section {
+  position: absolute;
+  top: calc(50% - 90px);
+  left: calc(50% - 602px); }
+
+.btn.white {
+  background: transparent !important;
+  border: 1px solid #ffffff !important;
+  color: white !important;
+  border-radius: 6px; }
+
+.home-footer {
+  line-height: 40px;
+  left: calc(50% - 150px);
+  width: 300px;
+  margin-bottom: 0px !important; }
+
+footer i {
+  padding-left: 8px;
+  color: #ffffff; }
+
+#master nav {
+  background: #e84e9b;
+  width: 1280px; }
+#master .footer {
+  background-color: #f2f2f2;
+  border-top: 1px solid #666666;
+  padding: 35px 50px 10px 50px;
+  color: #999999;
+  font-size: 12px;
+  border: 1px solid black; }
+  #master .footer li {
+    padding-top: 8px; }
+  #master .footer p {
+    color: #b1afaf; }
+  #master .footer i {
+    color: #999999;
+    padding-right: 5px; }
+
+/*# sourceMappingURL=style.css.map */
