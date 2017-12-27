@@ -15,10 +15,13 @@ Route::get('/', function () {
     return view('index');
 });
 
-Route::get('/influencer', function () {
-    return view('influencer/index');
+Route::get('influencer', function () {
+    return view('influencer.index');
 });
 
+Route::get('influencer/activate', function () {
+    return view('influencer.activation-view');
+});
 
 /*
 Route::get('/', function () {
