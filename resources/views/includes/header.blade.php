@@ -26,7 +26,9 @@
                         <li><a href="#">BLOG</a></li>
                         <li><a href="#">CONTACT</a></li>
                         <li><a class="margin-top-15" id="trigger-overlay"><i class="small material-icons line-height-36">search</i></a></li>
-                        <li><a class="btn waves-effect waves-light btn-dark-pink">Sign in</a></li>
+                        <li>
+                            <a href="{{ route('glogin') }}" class="btn waves-effect waves-light btn-dark-pink">Sign in</a>                               
+                        </li>
                     </ul>
                     <ul class="side-nav" id="nav-mobile">
                         <li><a href="{{ url('/influencer') }}">INFLUENCERS</a></li>

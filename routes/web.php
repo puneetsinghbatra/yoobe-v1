@@ -23,8 +23,5 @@ Route::get('influencer/activate', function () {
     return view('influencer.activation-view');
 });
 
-/*
-Route::get('/', function () {
-    return view('welcome');
-});
-*/
+Route::get('glogin',array('as'=>'glogin','uses'=>'UserController@googleLogin')) ;
+Route::get('google-user',array('as'=>'user.glist','uses'=>'UserController@listGoogleUser')) ;

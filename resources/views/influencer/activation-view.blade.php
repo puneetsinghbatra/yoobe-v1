@@ -1,6 +1,18 @@
 @include('includes.header')
     <div class="container">
-        <p class="font-size-20 text-brown"><span><img src="{{ url('images/user.png') }}" class="user-image"/></span> <span class="position-absolute margin-top-15 margin-left-10">Millie Bobby Brown</span></p>
+        <p class="font-size-20 text-brown"><span>
+        <img src="{{ url('images/user.png') }}" class="user-image"/></span> 
+        <span class="position-absolute margin-top-15 margin-left-10">
+        
+        
+            @foreach ($users as $user)
+        
+                <strong>{{ $user->email }} </strong>
+        
+            @endforeach     
+        
+            {!! $users->render() !!}
+        </span></p>
     </div>
     <div class="background-light-grey border-top-5">
     <div class="container padding-v-20">

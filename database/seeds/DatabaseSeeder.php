@@ -1,16 +1,21 @@
 <?php
 
 use Illuminate\Database\Seeder;
+use App\Models\Role;
 
-class DatabaseSeeder extends Seeder
-{
-    /**
-     * Run the database seeds.
-     *
-     * @return void
-     */
-    public function run()
-    {
-        // $this->call(UsersTableSeeder::class);
+class RoleSeeder extends Seeder{
+
+    public function run(){
+        DB::table('roles')->delete();
+
+        Role::create([
+            'name'   => 'user'
+        ]);
+
+        Role::create([
+            'name'   => 'administrator'
+        ]);
+
     }
+    
 }
