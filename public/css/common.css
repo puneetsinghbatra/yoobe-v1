@@ -1,7 +1,7 @@
 html{
     color: #757575;
     font-size: 13px;
-    font-family: Roboto,sans-serif;
+    font-family: 'Quicksand', sans-serif;
     font-weight: 400;
 }
 /*==== text-color ====*/
@@ -9,7 +9,7 @@ html{
     color: #505050 !important;
 }
 .text-pink{
-    color: #f33671 ;
+    color: #e64f99;
 }
 .text-blue{
     color: #41c0d9;
@@ -19,6 +19,15 @@ html{
 }
 .text-white{
     color: #ffffff !important;
+}
+.text-youtube{
+    color: #ff0000 !important;
+}
+.text-instagram{
+    color: #e1306c !important;
+}
+.text-twitter{
+    color: #1da1f2 !important;
 }
 /*==== text-color ====*/
 
@@ -30,15 +39,24 @@ html{
 .text-capitalize{
     text-transform: capitalize!important;
 }
+.text-underline{
+    text-decoration: underline;
+}
 /*==== text-transform ====*/
 
 
 /*==== font-size ====*/
+.font-size-11{
+    font-size: 11px !important;
+}
 .font-size-12{
     font-size: 12px;
 }
 .font-size-14{
     font-size: 14px;
+}
+.font-size-16{
+    font-size: 16px;
 }
 .font-size-20{
     font-size: 20px !important;
@@ -58,21 +76,27 @@ html{
 .font-weight-300{
     font-weight: 300;
 }
+.font-weight-500{
+    font-weight: 500;
+}
 /*==== font-weight ====*/
 
 
 /*==== background-color ====*/
 .background-pink {
-    background-color: #f33671 !important;
+    background-color: #e64f99 !important;
 }
 .background-white{
     background-color: #ffffff !important;
 }
 .background-grey{
-    background-color: #f2f2f2 !important;;
+    background-color: #f7f6f8 !important;;
 }
 .background-light-grey{
     background-color: #f2f2f261;
+}
+.background-dark-grey{
+    background-color: #e4e4e4;
 }
 .background-transparent{
     background-color: transparent !important;
@@ -91,8 +115,17 @@ html{
 .padding-top-5 {
     padding-top: 5px;
 }
+.padding-bottom-5 {
+    padding-bottom: 5px;
+}
 .padding-top-10 {
     padding-top: 10px !important;
+}
+.padding-bottom-10 {
+    padding-bottom: 10px !important;
+}
+.padding-bottom-15{
+    padding-bottom: 15px !important;
 }
 .padding-v-5 {
     padding-top: 5px;
@@ -100,6 +133,18 @@ html{
 }
 .padding-v-20{
     padding: 20px 0;
+}
+.padding-h-20{
+    padding: 0 20px !important;
+}
+.padding-left-10{
+    padding-left: 10px;
+}
+.padding-left-20{
+    padding-left: 20px !important;
+}
+.padding-left-30{
+    padding-left: 30px !important;
 }
 .padding-v-40{
     padding: 40px 0;
@@ -111,6 +156,9 @@ html{
 .padding-15{
     padding: 15px;
 }
+.padding-25{
+    padding: 25px;
+}
 /*==== padding ====*/
 
 
@@ -118,23 +166,52 @@ html{
 .margin-0{
     margin: 0 !important;
 }
+.margin-right-0{
+    margin-right: 0 !important;
+}
+.margin-bottom-0{
+    margin-bottom: 0 !important;
+}
 .margin-top-5{
     margin-top: 5px;
 }
 .margin-top-10{
     margin-top: 10px;
 }
+.margin-bottom-10{
+    margin-bottom: 10px !important;
+}
+.margin-top-20{
+    margin-top: 20px !important;
+}
+.margin-v-20{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.margin-v-30{
+    margin-top: 30px;
+    margin-bottom: 30px;
+}
 .margin-top-15{
     margin-top: 15px;
 }
+.margin-bottom-20{
+    margin-bottom: 20px;
+}
 .margin-top-30{
     margin-top: 30px !important;
+}
+.margin-top-40{
+    margin-top: 40px;
 }
 .margin-top-55{
     margin-top: 55px;
 }
 .margin-right-5{
     margin-right: 5px;
+}
+.margin-right-10{
+    margin-right: 10px;
 }
 .margin-right-15{
     margin-right: 15px;
@@ -146,6 +223,9 @@ html{
     margin-right: 5px;
     margin-left: 5px;
 }
+.margin-top-40{
+    margin-top: 40px;
+}
 /*==== margin ====*/
 
 
@@ -154,7 +234,7 @@ html{
     background-color: #41c0d9;   
 }
 .btn-pink, .btn-pink:hover{
-    background-color: #f33671;
+    background-color: #e64f99;
 }
 .btn-facebook, .btn-facebook:hover{
     background-color: #3b5998;
@@ -165,11 +245,27 @@ html{
 .btn-linkedin, .btn-linkedin:hover{
     background-color: #0077b5;
 }
+.btn-pinterest, .btn-pinterest:hover{
+    background-color: #bd081c;
+}
+.btn-instagram, .btn-instagram:hover{
+    background-color: #e1306c;
+}
 .btn-dark-pink{
-    background-color: #ca2b5d;
+    background-color: #cc2b7a;
 }
 .btn-dark-pink:hover, .btn-dark-pink:active, .btn-dark-pink:focus{
-    background-color: #d82c61;
+    background-color: #d82f82;
+}
+.btn-pink-bordered{
+    background-color: #ffffff;
+    color: #e64f99;
+    border: 1px solid #e64f99;
+}
+.btn-pink-bordered:hover{
+    background-color: #e64f99;
+    color: #ffffff;
+    border: 1px solid #e64f99;
 }
 /*==== button-color ====*/
 
@@ -194,6 +290,12 @@ html{
 }
 .border-top-5{
     border-top: 5px solid #f1efef;
+}
+.border-grey{
+    border: 1px solid #dcd9d9;
+}
+.border-bottom-grey{
+    border-bottom: 1px solid #dcd9d9;
 }
 /*==== border ====*/
 
@@ -222,6 +324,12 @@ html{
 .height-150{
     height: 150px;
 }
+.height-80-px{
+    height: 80px;
+}
+.height-160-px{
+    height: 160px;
+}
 /*==== height ====*/
 
 
@@ -234,6 +342,21 @@ html{
 }
 .width-30{
     width: 30%;
+}
+.width-22{
+    width: 22% !important;
+}
+.width-35-px{
+    width: 35px;
+}
+.width-45-px{
+    width: 45px;
+}
+.width-80-px{
+    width: 80px;
+}
+.width-95-px{
+    width: 95px;
 }
 /*==== width ====*/
 
