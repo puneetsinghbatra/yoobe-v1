@@ -11,17 +11,15 @@
 |
 */
 
+// Home Page
 Route::get('/', function () {
     return view('index');
 });
 
-Route::get('influencer', function () {
-    return view('influencer.index');
-});
+//Influencer Routes
+Route::get('influencer', 'InfluencerController@index')->name('influencer.index');
+Route::get('influencer/activate', 'InfluencerController@activate')->name('influencer.activate');
 
-Route::get('influencer/activate', function () {
-    return view('influencer.activation-view');
-});
-
+//Google Api Login
 Route::get('glogin',array('as'=>'glogin','uses'=>'UserController@googleLogin')) ;
 Route::get('google-user',array('as'=>'user.glist','uses'=>'UserController@listGoogleUser')) ;

@@ -53,6 +53,7 @@
     <script src="{{ url('js/modernizr.custom.js') }}"></script>
     <script src="{{ url('js/classie.js') }}"></script>
     <script src="{{ url('js/search.js') }}"></script>
+    @yield('pageLevelScripts')
 </body>
 
 </html>
