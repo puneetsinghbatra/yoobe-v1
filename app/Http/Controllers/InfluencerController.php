@@ -6,11 +6,7 @@ use Illuminate\Http\Request;
 
 class InfluencerController extends Controller
 {
-    public function index(){
-        return view('influencer.index');
-    }
-
-    public function activate(){
+    public function activateView(){
         return view('influencer.activation-view');
     }
 
