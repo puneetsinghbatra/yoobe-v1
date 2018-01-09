@@ -13,4 +13,8 @@ class InfluencerController extends Controller
     public function activate(){
         return view('influencer.activation-view');
     }
+
+    public function result(){
+        return view('influencer.activation-result');
+    }
 }

@@ -19,6 +19,7 @@ Route::get('/', function () {
 //Influencer Routes
 Route::get('influencer', 'InfluencerController@index')->name('influencer.index');
 Route::get('influencer/activate', 'InfluencerController@activate')->name('influencer.activate');
+Route::get('influencer/activate/result', 'InfluencerController@result')->name('influencer.result');
 
 //Google Api Login
 Route::get('glogin',array('as'=>'glogin','uses'=>'UserController@googleLogin')) ;
