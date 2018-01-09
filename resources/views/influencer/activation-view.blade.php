@@ -10,7 +10,7 @@
     <div class="row">
         <div class="col s8">Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.</div>
         <div class="col s4 right-align">
-          <a class="waves-effect waves-light btn btn-blue modal-trigger" href="{{route('influencer.result')}}">Launch my store</a>
+          <a class="waves-effect waves-light btn btn-blue modal-trigger" href="#">Launch my store</a>
           <!-- Modal Structure -->
           <div id="modal1" class="modal left-align">
             <div class="modal-content">

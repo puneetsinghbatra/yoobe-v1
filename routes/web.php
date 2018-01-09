@@ -17,8 +17,12 @@ Route::get('/', function () {
 });
 
 //Influencer Routes
-Route::get('influencer/activate', 'InfluencerController@activateView')->name('influencer.activate');
-Route::get('influencer/activate/result', 'InfluencerController@result')->name('influencer.result');
+
+// Ai Results - Activate Store Route 
+Route::get('influencer/result', 'InfluencerController@result')->name('influencer.result');
+// Launch Store Route
+Route::get('influencer/launch', 'InfluencerController@launch')->name('influencer.launch');
+
 
 //Google Api Login
 Route::get('glogin',array('as'=>'glogin','uses'=>'UserController@googleLogin')) ;

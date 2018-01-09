@@ -199,7 +199,7 @@
               <p class="margin-0 font-size-20"><b>Colors suggestions based on your audience</b></p>
               <div class="center-align">
                 <img src="{{asset('/images/colors.png')}}" class="margin-v-30">
-                <a class="waves-effect waves-light btn btn-blue margin-top-10">Create my Yoobe Store</a>
+                <a class="waves-effect waves-light btn btn-blue margin-top-10" href="#">Create my Yoobe Store</a>
               </div>
             </div>
             <div class="col s7 margin-top-20">
