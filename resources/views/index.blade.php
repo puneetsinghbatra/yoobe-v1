@@ -53,7 +53,7 @@
                         </div>
                     </div>
                     <div class="col s3 margin-0 padding-0 background-white height-45">
-                        <a class="btn btn-dark-pink waves-effect waves-light z-depth-0 btn-large-bordered width-100 font-size-14" href="#">Create my yoobe shop</a>
+                        <a class="btn btn-dark-pink waves-effect waves-light z-depth-0 btn-large-bordered width-100 font-size-14" href="{{route('influencer.result')}}">Create my yoobe shop</a>
                     </div>
                 </div>
             </div>

@@ -21,7 +21,7 @@
                 <div class="nav-wrapper">
                     <a href="#" class="brand-logo padding-top-10"><img src="{{ url('images/logo.png') }}" /></a>
                     <ul class="right hide-on-med-and-down menu-item">
-                        <li><a href="{{ url('/influencer') }}">INFLUENCERS</a></li>
+                        <li><a href="{{ url('/') }}">INFLUENCERS</a></li>
                         <li><a href="#">FANS</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">BLOG</a></li>
@@ -32,7 +32,7 @@
                         </li>
                     </ul>
                     <ul class="side-nav" id="nav-mobile">
-                        <li><a href="{{ url('/influencer') }}">INFLUENCERS</a></li>
+                        <li><a href="{{ url('/') }}">INFLUENCERS</a></li>
                         <li><a href="#">FANS</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">BLOG</a></li>
