@@ -2,7 +2,7 @@
 # Yoobe.me
 ![](https://pbs.twimg.com/profile_images/926733190454116352/RiMAsopB.jpg)
 
-### About
+# About
 Yoobe is a 1-click merchandise platform for digital influencers, selling custom artwork, crowdsourced from their fans.
 
 We will help content creators and web celebrities making money with their potential for engagement creating their merchandise store. But not just an ordinary store. Once they sync their social network profile, Yoobe´s A.I. analyzes the content and audience and suggests the best products to be sold.
@@ -21,16 +21,16 @@ Dev: http://app.yoobe.me
 
 ### GitHub repository process
 
-1 - Pull Latest Master
-2 - Create a Branch Name
-3 - Create the functionality
-4 - Push the Branch ( other dev pull this branch and make sure there is no error )
-5- Create Pull Request to Master.
+1. Pull Latest Master
+2. Create a Branch Name
+3. Create the functionality
+4. Push the Branch ( other dev pull this branch and make sure there is no error )
+5. Create Pull Request to Master.
 
 ### Current Devs working on this repo
 
-- Genau Lopes
 - Hassam Ali 
 - Mahmuda Z.
 - Luiz Ecker
 - Fabiano Oscar
+- Genau Lopes
