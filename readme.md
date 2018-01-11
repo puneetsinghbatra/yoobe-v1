@@ -19,13 +19,13 @@ Dev: http://app.yoobe.me
 - git clone https://github.com/yoobe-devs/yoobe-v1.git 
 - git pull origin/master
 
-### GitHub repository process
+### GitHub repository instructions for developer
 
-1. Pull Latest Master
-2. Create a Branch Name
-3. Create the functionality
-4. Push the Branch ( other dev pull this branch and make sure there is no error )
-5. Create Pull Request to Master.
+1. Fork Repo
+2. Keep repo update with Master
+3. Complete Task from Asana and push it in your Fork Repo
+4. Send Merge Request
+5. Fix Conflicts - Merge Request should be without Conflicts
 
 ### Current Devs working on this repo
 
