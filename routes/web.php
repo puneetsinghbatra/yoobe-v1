@@ -27,3 +27,7 @@ Route::get('influencer/launch', 'InfluencerController@launch')->name('influencer
 //Google Api Login
 Route::get('glogin',array('as'=>'glogin','uses'=>'UserController@googleLogin')) ;
 Route::get('google-user',array('as'=>'user.glist','uses'=>'UserController@listGoogleUser')) ;
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
