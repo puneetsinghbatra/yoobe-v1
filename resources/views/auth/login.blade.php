@@ -7,7 +7,7 @@
         <div class="col s8 offset-s2 grey lighten-5 signin-form" style="margin-top:80px">
             <div class="panel panel-default">
                 <div class="col s10 offset-s1">
-                    <h3 class="left-align"> Sign up </h3>
+                    <h3 class="left-align"> Sign in </h3>
                     @if (count($errors))
                         <ul>
                             @foreach($errors->all() as $error)
@@ -20,6 +20,18 @@
                 <div class="col s10 offset-s1 panel-body">
                     <form class="form-horizontal" method="POST" action="{{ route('login') }}">
                         {{ csrf_field() }}
+
+                        @if(session()->has('success'))
+                            <div class="alert alert-success">
+                                {{ session()->get('success') }}
+                            </div>
+                        @endif
+
+                        @if(session()->has('warning'))
+                            <div class="alert alert-warning">
+                                {{ session()->get('warning') }}
+                            </div>
+                        @endif
                       
                         <div class="row form-group{{ $errors->has('email') ? ' has-error' : '' }}">
                            
@@ -50,6 +62,14 @@
                                 @endif
                             </div>
                         </div>
+
+                        <div class="row">
+                            <div class="col s12">
+                                <a href="{{ route('glogin') }}">
+                                <img src="https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png" alt="Google sign-in button with white background" class="attempt-right">
+                                </a>
+                            </div>
+                        </div>                        
 
                         <div class="row form-group">
                           <div class="col s12 left-align">

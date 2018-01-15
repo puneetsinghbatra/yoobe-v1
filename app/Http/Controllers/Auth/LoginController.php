@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Auth;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use Illuminate\Foundation\Auth\AuthenticatesUsers;
+use App\Models\User;
 
 class LoginController extends Controller {
     /*
@@ -88,4 +89,21 @@ class LoginController extends Controller {
         }
         return redirect()->intended($this->redirectPath());
         }
+
+    public function activateUser(Request $request, $token) {
+        $user = User::where(['confirmation_code' => $token])->get()->first();
+        if(!$user || $token == '') {
+            abort(404);
+        } else {
+            $user->activated = 1;
+            $user->confirmation_code = null;
+            $user->save();
+
+            if(\Auth::login($user)) {
+                return redirect()->to('/');
+            } else {
+                return redirect()->route('login')->with('success', 'Your account is activated, you can login now.');
+            }
+        }
+    }
 }

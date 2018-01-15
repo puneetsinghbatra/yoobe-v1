@@ -77,7 +77,7 @@ class RegisterController extends Controller
             'username'  => $data['username'],
             'email'     => $data['email'],
             'password'  => bcrypt($data['password']),
-            'confirmation_code' => $this->confirmation_code,
+            'confirmation_code' => str_random(30),
         ]);
     }
 
@@ -91,13 +91,11 @@ class RegisterController extends Controller
     {
         $this->validator($request->all())->validate();
 
-        $this->confirmation_code = str_random(30);
-
         event(new Registered($user = $this->create($request->all())));
 
+        \Mail::to($user->email)->send(new \App\Mail\ActivateUser($user));
         //$this->guard()->login($user);
 
-        return $this->registered($request, $user)
-                        ?: redirect($this->redirectPath());
+        return redirect()->route('login')->with('success', 'Email sent to verify this account.');
     }
 }

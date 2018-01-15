@@ -22,8 +22,8 @@
                         <li><a href="#">FANS</a></li>
                         <li><a href="#">FAQ</a></li>
                         <li><a href="#">CONTACT</a></li>
-                        <li><a class="btn waves-effect waves-light btn-dark-pink">Sign up</a></li>
-                        <li><a class="btn waves-effect waves-light btn-dark-pink">Sign in</a></li>
+                        <li><a href="{{ route('register') }}" class="btn waves-effect waves-light btn-dark-pink">Sign up</a></li>
+                        <li><a href="{{ route('login') }}" class="btn waves-effect waves-light btn-dark-pink">Sign in</a></li>
                     </ul>
                     <ul class="side-nav" id="nav-mobile">
                         <li><a href="#">INFLUENCERS</a></li>

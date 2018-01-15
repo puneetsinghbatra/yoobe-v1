@@ -89,6 +89,14 @@
                           </div>
                         </div>
 
+                        <div class="row">
+                            <div class="col s12">
+                                <a href="{{ route('glogin') }}">
+                                <img src="https://developers.google.com/identity/images/btn_google_signin_light_normal_web.png" alt="Google sign-in button with white background" class="attempt-right">
+                                </a>
+                            </div>
+                        </div>
+
                         <div class="row form-group">
                             <div class="col s6 offset-s3 input-field">
 
