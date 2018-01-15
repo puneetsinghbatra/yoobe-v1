@@ -48,4 +48,9 @@ Route::post('password/reset', 'Auth\ResetPasswordController@reset')->name('passw
 //Activate Profile
 Route::get('/user/verify/{token}', 'Auth\LoginController@activateUser')->name('user.verify');
 
-Route::get('/home', 'HomeController@index')->name('home');
+Route::group(['middleware' => 'auth'], function(){
+	Route::get('/home', 'HomeController@index')->name('home');
+
+	Route::get('/profile', 'HomeController@getProfile')->name('user.profile');
+	Route::post('/profile/update', 'HomeController@updateProfile')->name('user.profile.update');
+});

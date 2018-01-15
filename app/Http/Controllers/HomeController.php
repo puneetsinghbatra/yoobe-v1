@@ -3,6 +3,8 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\UserProfileUpdateRequest;
+use App\Models\User;
 
 class HomeController extends Controller
 {
@@ -24,5 +26,17 @@ class HomeController extends Controller
     public function index()
     {
         return view('home');
+    }
+
+    public function getProfile(Request $request) {
+        $user = User::find(auth()->user()->id);
+        return view('user.profile.show')->with('user', $user);
+    }
+
+    public function updateProfile(UserProfileUpdateRequest $request) {
+        $user = User::find(auth()->user()->id);
+        $user->update($request->all());
+
+        return redirect()->back()->with('status', 'Updated successfully');
     }
 }

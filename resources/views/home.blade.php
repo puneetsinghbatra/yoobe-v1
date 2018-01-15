@@ -14,7 +14,9 @@
                         </div>
                     @endif
 
-                    You are logged in!
+                    Welcome {{ auth()->user()->firstname }}! This is your dashboard.
+                    <hr>
+                    <a href="{{ route('user.profile') }}" class="btn btn-primary btn-sm">Update Profile</a>
                 </div>
             </div>
         </div>
