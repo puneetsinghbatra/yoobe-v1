@@ -63,6 +63,49 @@
                             </div>
                         </div>
 
+                        <div class="row form-group{{ $errors->has('gender') || $errors->has('city') || $errors->has('state') ? ' has-error' : '' }}">
+                            <div class="col s4 input-field">
+                                <label for="gender" class="field-label"></label>
+                                <select id="gender" class="form-control" name="gender" required>
+                                    <option value="male" {{ old('gender') == 'male' ? 'selected' : '' }}>Male</option>
+                                    <option value="female" {{ old('gender') == 'female' ? 'selected' : '' }}>Female</option>
+                                    <option value="other" {{ old('gender') == 'other' ? 'selected' : '' }}>Other</option>
+                                </select>
+
+                                @if ($errors->has('gender'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('gender') }}</strong>
+                                    </span>
+                                @endif
+                            </div>  
+                            
+                            <div class="col s4 input-field">
+                                <label for="city" class="field-label"></label>
+                                <input id="city" type="text" placeholder="City" class="form-control" name="city" value="{{ old('city') }}" required>
+
+                                @if ($errors->has('city'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('city') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+
+                            <div class="col s4 input-field">
+                                <label for="country" class="field-label"></label>
+                                <select id="country" class="form-control" name="country" required>
+                                    @foreach(\App\Models\User::$countries as $k => $country)
+                                        <option value="{{ $country }}" {{ old('country') == $country ? 'selected' : '' }}>{{ $k }}</option>
+                                    @endforeach
+                                </select>
+
+                                @if ($errors->has('country'))
+                                    <span class="help-block">
+                                        <strong>{{ $errors->first('country') }}</strong>
+                                    </span>
+                                @endif
+                            </div> 
+                        </div>
+
                         <div class="row form-group{{ $errors->has('password') ? ' has-error' : '' }}">
                             
                           <div class="col s12 input-field">
