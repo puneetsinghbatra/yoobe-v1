@@ -2,10 +2,14 @@
 
 namespace App\Http\Controllers\Auth;
 
-use App\User;
+use App\Models\User;
 use App\Http\Controllers\Controller;
+
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Foundation\Auth\RegistersUsers;
+use Illuminate\Auth\Events\Registered;
+
 
 class RegisterController extends Controller
 {
@@ -29,6 +33,8 @@ class RegisterController extends Controller
      */
     protected $redirectTo = '/home';
 
+    protected $confirmation_code = null;
+
     /**
      * Create a new controller instance.
      *
@@ -48,9 +54,12 @@ class RegisterController extends Controller
     protected function validator(array $data)
     {
         return Validator::make($data, [
-            'name' => 'required|string|max:255',
-            'email' => 'required|string|email|max:255|unique:users',
-            'password' => 'required|string|min:6|confirmed',
+            'firstname'     => 'required|string|max:255',
+            'lastname'      => 'required|string|max:255',
+            'username'      => 'required|string|alpha_dash|between:4,255|unique:users',
+            'email'         => 'required|string|email|max:255|unique:users',
+            'password'      => 'required|string|min:6|confirmed',
+            'term-agree'    => 'accepted'
         ]);
     }
 
@@ -63,9 +72,32 @@ class RegisterController extends Controller
     protected function create(array $data)
     {
         return User::create([
-            'name' => $data['name'],
-            'email' => $data['email'],
-            'password' => bcrypt($data['password']),
+            'firstname' => $data['firstname'],
+            'lastname'  => $data['lastname'],
+            'username'  => $data['username'],
+            'email'     => $data['email'],
+            'password'  => bcrypt($data['password']),
+            'confirmation_code' => $this->confirmation_code,
         ]);
+    }
+
+    /**
+     * Handle a registration request for the application.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function register(Request $request)
+    {
+        $this->validator($request->all())->validate();
+
+        $this->confirmation_code = str_random(30);
+
+        event(new Registered($user = $this->create($request->all())));
+
+        //$this->guard()->login($user);
+
+        return $this->registered($request, $user)
+                        ?: redirect($this->redirectPath());
     }
 }

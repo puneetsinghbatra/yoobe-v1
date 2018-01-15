@@ -67,7 +67,7 @@
             </div>
         </nav>
     </div>
-    <section class="centered">
+    <section class="">
         <div class="center-align">
              @yield('content')
         </div>
